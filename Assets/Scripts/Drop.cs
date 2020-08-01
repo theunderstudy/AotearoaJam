@@ -15,7 +15,7 @@ public class Drop : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Player _player = other.gameObject.GetComponent<Player>();
         if (_player!= null)
@@ -28,6 +28,10 @@ public class Drop : MonoBehaviour
     protected virtual void CollideWithPlayer(Player player)
     {
 
+    }
+    public virtual void CollideWithProjectile(Projectile projectile)
+    {
+        Destroy(gameObject);
     }
 
 }

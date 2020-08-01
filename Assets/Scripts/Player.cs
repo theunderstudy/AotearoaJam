@@ -5,13 +5,18 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float MoveSpeed=5;
-   
 
+    public float TimeBetweenShots = 1;
+    private float CurrentTime = 0;
+
+    public GameObject BulletPrefab;
     // Update is called once per frame
     void Update()
     {
 
         UpdatePosition();
+
+        FireSequence();
     }
     private void UpdatePosition()
     {
@@ -33,7 +38,23 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void FireSequence()
+    {
+        CurrentTime += Time.deltaTime;
 
+        if (CurrentTime > TimeBetweenShots)
+        {
+            FireBullet();
+            CurrentTime = 0;
+        }
+    }
+
+    private void FireBullet()
+    {
+        GameObject Bullet = Instantiate (BulletPrefab);
+
+        Bullet.transform.position = transform.position;
+    }
 
     
 }
