@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 10
-  TimeBetweenShots: 1
+  TimeBetweenShots: 0.5
   BulletPrefab: {fileID: 8908476502624837627, guid: 2985a44b7ca9c1249b02a5c1459b73ca, type: 3}
 --- !u!50 &32256545
 Rigidbody2D:
