@@ -1088,8 +1088,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DroppedPrefabs:
-  - {fileID: 214459606940817318, guid: 116fa739070a15642abe7e414115f500, type: 3}
-  - {fileID: 4869306117404333996, guid: cd1fe6cf4ec790d4abaa80893e64e6c5, type: 3}
+  - {fileID: 4869306117404333996, guid: fd894db78470755408b01fb112bec529, type: 3}
+  - {fileID: 4869306117404333996, guid: 1c46466073ac1df45a6392cdcd6dfef0, type: 3}
   - {fileID: 4869306117404333996, guid: cd1fe6cf4ec790d4abaa80893e64e6c5, type: 3}
   DropTime: 1
   DropTimeDegradation: 0.1
