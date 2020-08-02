@@ -14,7 +14,7 @@ public class UI : Singleton<UI>
 
     public Text GameScoreText;
 
-    private int Score=0;
+    public int Score=0;
 
     private void Start()
     {
@@ -33,7 +33,7 @@ public class UI : Singleton<UI>
     {
         for (int i = 0; i < LifeImages.Length; i++)
         {
-            if (i > GameManager.Instance.Lives)
+            if (i >= GameManager.Instance.Lives)
             {
                 LifeImages[i].gameObject.SetActive(false);
             }

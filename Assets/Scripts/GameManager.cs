@@ -20,6 +20,8 @@ public class GameManager : Singleton<GameManager>
         Lives = 3;
 
         player.transform.position = Vector3.zero;
+
+        UI.Instance.Score = 0;
         UI.Instance.StartGameScreen.SetActive(false);
     }
 
@@ -32,6 +34,7 @@ public class GameManager : Singleton<GameManager>
         player.transform.position = Vector3.zero;
 
         UI.Instance.StartGameScreen.SetActive(true);
+     
         Audio.PlayOneShot(DeathSound);
     }
 
