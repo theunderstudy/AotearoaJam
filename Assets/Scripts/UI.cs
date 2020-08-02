@@ -6,6 +6,14 @@ using UnityEngine.UI;
 public class UI : Singleton<UI>
 {
     public Text ScoreText;
+
+    public Image[] LifeImages;
+
+
+    public GameObject StartGameScreen;
+
+    public Text GameScoreText;
+
     private int Score=0;
 
     private void Start()
@@ -18,5 +26,22 @@ public class UI : Singleton<UI>
         Score += ScoreChange;
 
         ScoreText.text = "Score: " + Score;
+        GameScoreText.text = "Score: " + Score; 
     }
+
+    void Update()
+    {
+        for (int i = 0; i < LifeImages.Length; i++)
+        {
+            if (i > GameManager.Instance.Lives)
+            {
+                LifeImages[i].gameObject.SetActive(false);
+            }
+            else
+            {
+                LifeImages[i].gameObject.SetActive(true);
+            }
+        }
+    }
+
 }

@@ -8,10 +8,28 @@ public class Drop : MonoBehaviour
 
     public int Score = 10;
 
+    public Vector3 DropDirection;
+
+
+    public int lifeTime = 10;
+    public float CurrentAge = 0;
+
     // Update is called once per frame
     void Update()
     {
-        transform.position += -Vector3.up * Time.deltaTime * MoveSpeed;
+        if (!GameManager.Instance.bGameRunning)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        transform.position += DropDirection * Time.deltaTime * MoveSpeed;
+
+        CurrentAge += Time.deltaTime;
+
+        if (CurrentAge > lifeTime)
+        {
+            Destroy(gameObject);
+        }
     }
 
 

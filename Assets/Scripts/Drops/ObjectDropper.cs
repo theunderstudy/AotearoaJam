@@ -5,14 +5,21 @@ using UnityEngine;
 public class ObjectDropper : MonoBehaviour
 {
 
-    public GameObject[] DroppedPrefabs;
+    public Drop[] DroppedPrefabs;
     public float DropTime = 5;
     public float DropTimeDegradation = 0.1f;
-    float CurrentTime = 0;
 
+    public float DropMin = 0.5f;
+    float CurrentTime = 0;
+    public Vector3 Dropdirection;
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.Instance.bGameRunning)
+        {
+            return;
+        }
+
         CheckDrops();
     }
 
@@ -24,17 +31,17 @@ public class ObjectDropper : MonoBehaviour
             CurrentTime = 0;
             DropTime -= DropTimeDegradation;
 
-            if (DropTime < 0.1f)
+            if (DropTime < DropMin)
             {
-                DropTime = 0.1f;
+                DropTime = DropMin;
             }
             DropObject();
         }
     }
     void DropObject()
     {
-        GameObject gameObject = Instantiate(DroppedPrefabs[Random.Range(0,DroppedPrefabs.Length)]);
-
+        Drop gameObject = Instantiate(DroppedPrefabs[Random.Range(0,DroppedPrefabs.Length)]);
+        gameObject.DropDirection = Dropdirection;
         Vector3 DropPosition = RandomPointInBounds(GetComponent<Collider>().bounds);
         gameObject.transform.position = DropPosition; 
     }
