@@ -511,9 +511,9 @@ MonoBehaviour:
   DroppedPrefabs:
   - {fileID: 9029765888843896658, guid: fd894db78470755408b01fb112bec529, type: 3}
   - {fileID: 9029765888843896658, guid: fd894db78470755408b01fb112bec529, type: 3}
-  DropTime: 2
+  DropTime: 3
   DropTimeDegradation: 0.2
-  DropMin: 0.5
+  DropMin: 1
   Dropdirection: {x: 1, y: 0, z: 0}
 --- !u!65 &304879917
 BoxCollider:
@@ -1792,7 +1792,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 18
-      m_TileSpriteIndex: 19
+      m_TileSpriteIndex: 20
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2496,10 +2496,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 4201204248492916061, guid: f492c5d6ef9ed9445b1c6e71dfc5efa7, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 4201204248492916061, guid: f492c5d6ef9ed9445b1c6e71dfc5efa7, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -6321681693144094487, guid: f492c5d6ef9ed9445b1c6e71dfc5efa7, type: 3}
   - m_RefCount: 1
@@ -3101,6 +3101,7 @@ MonoBehaviour:
   - {fileID: 442851665}
   StartGameScreen: {fileID: 1061045050}
   GameScoreText: {fileID: 1737056363}
+  Score: 0
 --- !u!114 &1500559193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3467,9 +3468,9 @@ MonoBehaviour:
   DroppedPrefabs:
   - {fileID: 9029765888843896658, guid: fd894db78470755408b01fb112bec529, type: 3}
   - {fileID: 9029765888843896658, guid: fd894db78470755408b01fb112bec529, type: 3}
-  DropTime: 2
+  DropTime: 3
   DropTimeDegradation: 0.2
-  DropMin: 0.5
+  DropMin: 1
   Dropdirection: {x: -1, y: 0, z: 0}
 --- !u!65 &1720054890
 BoxCollider:
@@ -6574,7 +6575,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 15
-      m_TileSpriteIndex: 15
+      m_TileSpriteIndex: 19
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8649,16 +8650,16 @@ Tilemap:
     m_Data: {fileID: -7298333753438424060, guid: f492c5d6ef9ed9445b1c6e71dfc5efa7, type: 3}
   - m_RefCount: 10
     m_Data: {fileID: -2897109125571388157, guid: f492c5d6ef9ed9445b1c6e71dfc5efa7, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 7359933070796627780, guid: f492c5d6ef9ed9445b1c6e71dfc5efa7, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 8
     m_Data: {fileID: -7538711883206793069, guid: f492c5d6ef9ed9445b1c6e71dfc5efa7, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 3621198337132132537, guid: f492c5d6ef9ed9445b1c6e71dfc5efa7, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 3213961849711041799, guid: f492c5d6ef9ed9445b1c6e71dfc5efa7, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 7359933070796627780, guid: f492c5d6ef9ed9445b1c6e71dfc5efa7, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 4540998220038498553, guid: f492c5d6ef9ed9445b1c6e71dfc5efa7, type: 3}
   - m_RefCount: 1

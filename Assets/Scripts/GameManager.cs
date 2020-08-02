@@ -14,6 +14,8 @@ public class GameManager : Singleton<GameManager>
     public AudioSource Audio;
 
     public AudioClip DeathSound;
+
+    public ObjectDropper[] Droppers;
     public void StartGame()
     {
         bGameRunning = true;
@@ -23,6 +25,10 @@ public class GameManager : Singleton<GameManager>
 
         UI.Instance.Score = 0;
         UI.Instance.StartGameScreen.SetActive(false);
+        for (int i = 0; i < Droppers.Length; i++)
+        {
+            Droppers[i].DropTime = 5;
+        }
     }
 
 
