@@ -7,6 +7,8 @@ public class Projectile : MonoBehaviour
     public float Speed = 5;
     public Vector3 MovementDirection;
 
+
+
     // Update is called once per frame
     void Update()
     {

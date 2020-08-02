@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public float TimeBetweenShots = 1;
     private float CurrentTime = 0;
 
-    public GameObject BulletPrefab;
+    public PlayerBullet BulletPrefab;
 
     public Package AttachedPackage;
     // Update is called once per frame
@@ -53,9 +53,16 @@ public class Player : MonoBehaviour
 
     private void FireBullet()
     {
-        GameObject Bullet = Instantiate(BulletPrefab);
+        PlayerBullet Bullet = Instantiate(BulletPrefab);
+        //Vector3 shootDirection;
+        //Vector3 mousePosition = Input.mousePosition;
+        //mousePosition.z = (transform.position-Camera.main.transform.position ).z;
+        //shootDirection = Camera.main.ScreenToWorldPoint(mousePosition);
+       
+        //Bullet.MovementDirection = shootDirection.normalized;
 
         Bullet.transform.position = transform.position;
+
     }
 
 
