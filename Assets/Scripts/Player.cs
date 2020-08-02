@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float MoveSpeed=5;
+    public float MoveSpeed = 5;
 
     public float TimeBetweenShots = 1;
     private float CurrentTime = 0;
 
     public GameObject BulletPrefab;
+
+    public Package AttachedPackage;
     // Update is called once per frame
     void Update()
     {
@@ -51,10 +53,34 @@ public class Player : MonoBehaviour
 
     private void FireBullet()
     {
-        GameObject Bullet = Instantiate (BulletPrefab);
+        GameObject Bullet = Instantiate(BulletPrefab);
 
         Bullet.transform.position = transform.position;
     }
 
+
+    public bool PackageAttached()  { return AttachedPackage != null; }
+    public void AttachPackage(Package package)
+    {
+        if (AttachedPackage != null)
+        {
+            AttachedPackage.Destroy();
+
+            AttachedPackage = null;
+        }
+
+        AttachedPackage = package;
+
+        AttachedPackage.transform.parent = transform;
+        AttachedPackage.transform.localPosition = Vector3.zero;
+    }
+
+    public void DeliverAttachedPackage()
+    {
+        if (AttachedPackage != null)
+        {
+            AttachedPackage.Deliver();
+        }
+    }
     
 }
