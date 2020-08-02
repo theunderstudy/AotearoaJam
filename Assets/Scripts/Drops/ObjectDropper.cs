@@ -33,7 +33,7 @@ public class ObjectDropper : MonoBehaviour
     }
     void DropObject()
     {
-        GameObject gameObject = Instantiate(DroppedPrefabs[Random.Range(0,DroppedPrefabs.Length-1)]);
+        GameObject gameObject = Instantiate(DroppedPrefabs[Random.Range(0,DroppedPrefabs.Length)]);
 
         Vector3 DropPosition = RandomPointInBounds(GetComponent<Collider>().bounds);
         gameObject.transform.position = DropPosition; 

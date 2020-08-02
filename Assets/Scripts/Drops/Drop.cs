@@ -15,10 +15,10 @@ public class Drop : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        Player _player = other.gameObject.GetComponent<Player>();
-        if (_player!= null)
+        Player _player = col.gameObject.GetComponent<Player>();
+        if (_player != null)
         {
             CollideWithPlayer(_player);
         }
